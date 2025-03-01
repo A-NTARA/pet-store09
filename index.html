@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="icon.png" type="image/x-icon">
+    <title>Pet Store</title>
+    <style>
+        img{
+            border-radius: 10%;
+            margin-bottom: 4px;
+            align-items: center;
+        }
+
+        .modal {
+            display: none; 
+            position: fixed; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            background-color: rgba(0,0,0,0.5); 
+            padding-top: 60px; 
+        }
+
+        .modal h2{
+            margin-bottom: 15px;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: rgb(54, 58, 47);
+            color: white;
+            margin: 15% auto; 
+            padding: 20px;
+            border: 1px solid #888;
+            width: 60%; 
+            text-align: center;
+        }
+
+        #description{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        
+    </style>
+</head>
+
+<body >
+<div id="parent"> 
+    <div id="header">
+   <center>
+        <h1 id="heading">Welcome to Pawfect Store</h1></center>
+        <p id="pargraph-container">
+            We welcome you to our online pet store,your one-stop destination for all things pet-related! Whether you're a seasoned pet owner or just considering adding a furry friend to your family, we're here to provide you with valuable information, resources, and inspiration. Here you can have a look at the different 
+            breeds of dogs available at our store. We assure you with the quality of the breeds
+            and we will be solely responsible for the  delivery of your respective pet.
+            We ship all over India, all you have to do is sign-up on our website and fill the 
+            required details. So what are you waiting for! Go ahead select the puppy of your choice 
+            and wait for your furry animal.
+        </p><br><br></div>
+</div> 
+
+<div id="content">
+    <center><h1 >Pet Profiles</h1></center>
+    <hr size="4" align="center" width="50%" color="black">
+
+    <div class="container1">
+        
+        <div class="box1">
+            <h1 id="names">Golden Retriever</h1>
+            <img src="https://cdn.pixabay.com/photo/2022/08/26/15/51/golden-retriever-7412806_640.jpg" alt="Golden Retriever puppy" 
+            onclick="showDetails( 'Golden Retriever','The Golden Retriever, an exuberant Scottish gundog of great beauty, stands among America most popular dog breeds. They are serious workers at hunting and field work, as guides for the blind, and in search-and-rescue, enjoy obedience and other competitive events, and have an endearing love of life when not at work. The Golden Retriever is a sturdy, muscular dog of medium size, famous for the dense, lustrous coat of gold that gives the breed its name. The broad head, with its friendly and intelligent eyes, short ears, and straight muzzle, is a breed hallmark.')" height="170px" width="277px">       
+                <h4>Price : Between 25000 to 50000 </h4>      
+        </div>
+
+        <div class="box2">
+            <h1>Husky</h1>
+            <img src="https://cdn.pixabay.com/photo/2019/05/10/13/21/husky-4193503_640.jpg" alt="Husky puppy" height="170px" width="277px" onclick="showDetails('Husky','The graceful, medium-sized Siberian Husky almond-shaped eyes can be either brown or blue and sometimes one of each and convey a keen but amiable and even mischievous expression. Quick and nimble-footed, Siberians are known for their powerful but seemingly effortless gait.These are energetic dogs who cannot resist chasing small animals, so secure running room is a must. An attractive feature of the breed: Sibes are naturally clean, with little doggy odor.')">
+            <h4>Price : Between 35000 to 45000 </h4>
+        </div>
+
+        <div class="box3">
+            <h1>Pug</h1>
+            <img src="https://cdn.pixabay.com/photo/2016/07/07/15/35/puppy-1502565_1280.jpg" alt="Pug puppy"
+            height="170px" width="277px" onclick="showDetails('Pug','Pugs come in three colors: silver or apricot-fawn with a black face mask, or all black. The large round head, the big, sparkling eyes, and the wrinkled brow give Pugs a range of human-like expressions surprise, happiness, curiosity that have delighted owners for centuries. Pug owners say their breed is the ideal house dog. Pugs are happy in the city or country, with kids or old folks, as an only pet or in a pack. They enjoy their food, and care must be taken to keep them trim. ')">
+            <h4>Price : Between 8000 to 20000 </h4>
+        </div>           
+    
+    </div>
+
+
+    <div class="container2">
+        
+        <div class="box4">
+            <h1>Corgi</h1>
+            <img src="https://cdn.pixabay.com/photo/2021/07/05/14/07/dog-6389277_640.jpg" alt=" Corgi puppy"
+            height="170px" width="277px" onclick="showDetails('Corgi','Corgi is a strong, athletic, and lively little herder who is affectionate and companionable without being needy. They are one the world most popular herding breeds. Short but powerful legs, muscular thighs, and a deep chest equip him for a hard day work. Built long and low, corgi are surprisingly quick and agile.They can be red, sable, fawn, and black and tan, with or without white markings.The corgi is a bright, sensitive dog who enjoys play with his human family and responds well to training.')">
+            <h4>Price : Between 25000 to 60000 </h4>
+        </div>
+    
+        <div class="box5">
+            <h1>Labrador</h1>
+            <img src="https://cdn.pixabay.com/photo/2023/03/05/15/39/animal-7831718_640.jpg" alt="Labrodar puppy" 
+            height="170px" width="277px" onclick="showDetails('Labrador','The Labrador is friendly, energetic, and playful. It was bred as a sporting and hunting dog but is widely kept as a companion dog. It may also be trained as a guide or assistance dog, or for rescue or therapy work. Labradors are a medium-large breed. They should be as long from the withers to the base of the tail as they are from the floor to the withers. Labradors are registered in three colours: Solid black, yellow and chocolate')">
+            <h4>
+                Price : Between 6000 to 20000 
+            </h4>
+        </div>
+
+        <div class="box6">
+            <h1>German Shepherd</h1>
+            <img src="https://cdn.pixabay.com/photo/2019/03/27/15/24/animal-4085255_640.jpg" alt="German Shepherd puppy"
+            height="170px" width="277px" onclick="showDetails('German Shepherd','German shepherd dogs are one of the most popular breeds in the world, treasured for their intelligence, loyalty, and athleticism. They are large brown-and-black dogs with a streamlined build that makes them both strong and agile. They are undoubtedly versatile dogs, but they need owners who can give them enough ways to expend their energy and smarts. If you think you can keep up, read on to learn more about the German shepherd dog.')">
+            <h4>Price : Between 18000 to 45000
+            </h4>
+        </div>
+
+    </div>
+           
+
+    <div class="container3">
+        
+        <div class="box7">
+
+            <h1>Pomeranian</h1>
+            <img src="https://cdn.pixabay.com/photo/2017/08/01/09/04/dog-2563759_640.jpg" alt="Pomeranian puppy" height="170px" width="277px" onclick="showDetails('Pomeranian','The Pomeranian is a tiny dog—a toy breed weighing just 3 to 7 pounds—with a long coat and distinctive neck ruff that harken back to their spitz heritage. Poms are typically friendly but can be bossy and barky, so they are not the dog for everyone. Families with young children might not be an ideal home for a stubborn Pom, but the breed often gets along well with older and calmer children.')">
+            <br>
+                <h4>Price : Between 5000 to 20000 </h4>
+        </div>
+       
+        <div class="box8">
+            <h1>Beagle</h1>
+            <img src="https://cdn.pixabay.com/photo/2017/06/28/04/07/dog-2449668_640.jpg" alt="Beagle puppy" height="170px" width="277px" onclick="showDetails('Beagle','The beagle is one of the most recognizable medium-sized dog breeds, known for their large, expressive eyes, floppy ears, and upright, white-tipped tail. They have a short, tricolored coat typically dominated by white and varied shades of brown. Beagles are scent hounds, hunting and tracking their prey by ground-scenting, and their keen sense of smell ranks with bloodhounds and basset hounds.')">
+            <h4>Price : Between 15000 to 50000 </h4>
+        </div>
+
+        <div class="box9">
+            <h1>Rottweiler</h1>
+            <img src="https://cdn.pixabay.com/photo/2022/01/29/11/58/dog-6977210_640.jpg" alt="Rottweiler puppy"
+            height="170px" width="277px" onclick="showDetails('Rottweiler','A well-bred Rottweiler is calm and confident. It’s typically aloof toward strangers, but never timid or fearful. Rottweilers exhibit a “wait-and-see” attitude when confronted with new people and situations. When these characteristics come together as they should, the Rottweiler is a natural guard dog with a mellow disposition who is successful not only in police, military, and customs work but also as a family friend and protector.')">
+            <h4>Price : Between 20000 to 60000 </h4>
+        </div>
+        <div class="btn">
+            <button id="signup"><a href="sign_up.html" target="_blank">Sign Up</a></button>
+        </div>
+    </div>
+    
+</div> 
+    
+
+<hr size="4">
+<footer>
+    <h1>Follow Us On!</h1> 
+        <div class="social-media">
+            <a href="http://in.youtube.com" target="_blank"><i class="fa-brands fa-youtube" style="color: #cd1313;"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram" style="color: #b32cce;"></i></a>
+            <a href="https://web.telegram.org/" target="_blank"><i class="fa-brands fa-telegram" style="color: #74C0FC;"></i></a>
+        </div><br><br>
+
+        <h3>Contacts:</h3>
+        <ul>
+            <li>+91-5785976739</li>
+        </ul><br>
+
+        <h3>Gmail:</h3>
+        <ul>
+            <li>petstore45@gmail.com</li>
+        </ul><br>
+        <h3>Address:</h3>
+        <ul>
+            <h4>Jalandhar City,Punjab</h4>
+        </ul>
+</footer>
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>       
+        <h2 id="dogName"></h2>      
+        <p id="description"></p>
+    </div>
+</div>
+
+     <script>
+        function showDetails(name,description) {
+        
+        document.getElementById('dogName').innerText = name;
+        document.getElementById('description').innerText = description;
+        document.getElementById('myModal').style.display = "block";
+    }
+
+    function closeModal() {
+        document.getElementById('myModal').style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == document.getElementById('myModal')) {
+            closeModal();
+        }
+    }
+     </script>
+</body>
+</html>
